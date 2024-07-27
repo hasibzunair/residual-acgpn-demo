@@ -22,7 +22,7 @@ def new_session(model_name: str) -> BaseSession:
         session_class = SimpleSession
     elif model_name == "u2net":
         md5 = "60024c5c889badc19c04ad937298a77b"
-        url = "https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab"
+        url = "https://drive.google.com/uc?id=1SJ732aUhGEL3h0hRnEazIdiDZ0goTIip"
         session_class = SimpleSession
     elif model_name == "u2net_human_seg":
         md5 = "c09ddc2e0104f800e3e1bb4652583d1f"
