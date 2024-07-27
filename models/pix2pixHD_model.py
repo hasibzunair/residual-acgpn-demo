@@ -48,9 +48,9 @@ def morpho(mask, iter, bigger=True):
             tem = cv2.dilate(tem, kernel, iterations=iter)
         else:
             tem = cv2.erode(tem, kernel, iterations=iter)
-        tem = tem.astype(float64)
+        tem = tem.astype(float)
         tem = tem.reshape(1, 256, 192)
-        new.append(tem.astype(float64)/255.0)
+        new.append(tem.astype(float)/255.0)
     new = np.stack(new)
     new = torch.FloatTensor(new).cuda()
     return new
@@ -66,9 +66,9 @@ def morpho_smaller(mask, iter, bigger=True):
             tem = cv2.dilate(tem, kernel, iterations=iter)
         else:
             tem = cv2.erode(tem, kernel, iterations=iter)
-        tem = tem.astype(float64)
+        tem = tem.astype(float)
         tem = tem.reshape(1, 256, 192)
-        new.append(tem.astype(float64)/255.0)
+        new.append(tem.astype(float)/255.0)
     new = np.stack(new)
     new = torch.FloatTensor(new).cuda()
     return new
